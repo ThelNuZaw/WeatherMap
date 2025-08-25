@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+   <title>Weather Map</title>
+   <link rel = "stylesheet" href = "/main.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <h1>Weather Map</h1>
+    
+   <div class = "card weather-display">
+    <% if(!content.Lname) {%>
+        <p><%= content %></p>
+    <%}
+    else{%>
+        <div class = "info">
+            <h2 class = "city"><%= content.Lname %></h2>
+            <span class = "detail">
+                <img src = "<%= content.Logo %>" alt = "weather symbol" class = "icon_img"/> 
+                <span class = "condition"><%= content.Result %> </span>
+                
+        
+            </span>
+            <p class = "temperature"><%= content.Temp %>°C </p>
+           
+        </div>
+    </div>
+        
+        
+    <%}%>
+    
+ 
+</div>
+<form method = "POST" action = "/getweather" class = "card_form1">
+    <label>Location</label>
+    <input type = "text" name ="q" id = "location" required placeholder="Enter the city like London" />
+    <input id="get" type="submit" value="Submit">
+
+
+</form>
+
+<form method = "POST" action = "/getweatherforecastin3days" class = "card_form2">
+    <label>Do you want to guess tomorrow weather condition?</label> <br>
+    <input type = "text" name = "guess" placeholder="Cloudy, Sunny, etc. " >
+    <input type="hidden" name="q" value="<%= content.Lname %>">
+  <input type="hidden" name="result" value="<%= content.Result %>">
+  <input type="hidden" name="logo" value="<%= content.Logo %>">
+  <input type="hidden" name="temp" value="<%= content.Temp %>">
+    <input type = "submit" value = "Check">
+  
+
+</form>
+<div class = "guess-feedback">
+    <% if(guessingcondition.visible && guessingcondition.actual){%>
+       <img src = "<%=guessingcondition.glogo %>" alt = "guessWlogo" class = "guessicon"/>
+       <p class = "g-mes">We are guessing to be <strong><%= guessingcondition.actual%></strong> tomorrow. Thanks for guessing!</p>
+    <%}%>
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #232526, #414345);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  color: #333;
+}
+
+/* Title */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Reusable Card Style */
+.card,
+.card_form1,
+.card_form2,
+.guess-feedback {
+  background-color: #ffffffee;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* ========== Weather Info Area ========== */
+.weather-display {
+  text-align: center;
+  animation: fadeInScale 0.6s ease-out;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.city,
+.city-name {
+  font-size: 2.2rem;
+  color: #0077cc;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Icon + Condition Side-by-Side */
+.detail,
+.icon-condition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+/* Weather Icon */
+.icon_img,
+.icon-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Condition Text */
+.condition,
+.condition-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Temperature */
+.temperature,
+.temp-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111;
+}
+
+/* ========== Forms ========== */
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* ========== Guess Feedback ========== */
+.guess-feedback {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(135deg, #e0f7fa, #c0f1ea);
+    border-left: 6px solid #00bcd4;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-top: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    animation: slideFadeIn 0.5s ease-out;
+  }
+  
+  .guessicon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+    animation: float 3s ease-in-out infinite;
+    border-radius: 50%;
+    background-color: #ffffffcc;
+    padding: 5px;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
+  }
+  
+  .g-mes {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #004d40;
+    line-height: 1.5;
+  }
+/* ========== Animations ========== */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slideFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* ========== Responsive ========== */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .city,
+  .city-name {
+    font-size: 1.7rem;
+  }
+
+  input[type="submit"] {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .icon-img,
+  .icon_img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .temperature {
+    font-size: 1.5rem;
+  }
+}
