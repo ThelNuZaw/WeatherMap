@@ -45,13 +45,16 @@ npm start
 http://localhost:4000
 ```
 ## API Endpoints
-- `GET/`
-  Renders the home page
-- `POST/getweather`
-  q=<city name> input
-  Displays current weather
-  After this step, user can access the forecast.
-- `POST/getweatherforecastin3days`
-  Triggered after `/getweather`
-  User may guess tomorrow's weather(Optional)
-  Reveals the actual forecast for tomorrow.
+
+- **GET /**  
+  Renders the home page with a prompt to enter a city.
+
+- **POST /getweather**  
+  - **Input:** `q=<city name>`  
+  - **Output:** Displays current weather.
+  - **Note:** After this step, user can access the forecast option.
+
+- **POST /getweatherforecastin3days**  
+  - **Triggered:** after `/getweather`  
+  - **Optional:** User may guess tomorrow’s weather.
+  - **Output:** Reveals the actual forecast for tomorrow.
