@@ -14,14 +14,14 @@ Weather Map is a simple Node.js app that displays current weather and a tomorrow
 - Display current weather condition with icon and temperature.
 - Guess tomorrow weather condition in selection box.
 - Reveal tomorrow's prdicted condition.
-
+<a href = 'builtwith'></a>
 ## Built With
 - [Node.js](https://nodejs.org/en)
 - [Express.js](https://expressjs.com/)
 - [EJS](https://ejs.co/)
 - [Axios](https://axios-http.com/docs/intro)
 - [WeatherAPI.com](https://openweathermap.org/api)
-
+<a href = 'getting-s'></a>
 ## Getting Started
 ### Prerequisites
 - Node.js(>= 18.x recommended)
