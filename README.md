@@ -4,9 +4,9 @@
 Weather Map is a simple Node.js app that displays current weather and a tomorrow forecast guess for any city that user inputs. It uses Express server with EJS views and fetches data from [WeatherAPI.com](https://openweathermap.org/api) with corresponding endpoints.
 
 ## Table of Contents
-- [Functional Requirement](#funreq)
-- [Built With](#builtwith)
-- [Getting Started](#getting-s)
+- [Functional Requirement](#functional-requirement)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
 
 
 ## Functional Requirement
